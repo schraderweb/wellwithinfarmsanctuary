@@ -10,7 +10,7 @@
       background-size: cover;
     "
   >
-    <div class="absolute inset-0 bg-neutral-800 opacity-50"></div>
+    <div class="absolute inset-0 opacity-50"></div>
     <!-- Optional: Background overlay for better text visibility -->
     <div class="relative z-10 flex flex-col items-center justify-center h-full">
       <h1 class="text-2xl md:text-6xl text-white font-bold mb-4">
