@@ -15,6 +15,7 @@ export default function useBlogResource(collectionName:string){
               id:doc.id,
               title:doc.data().title,
               subject:doc.data().subject,
+              coverImage:doc.data().coverImage,
               body:doc.data().body
                });
              });

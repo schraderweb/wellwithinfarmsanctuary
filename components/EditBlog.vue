@@ -3,6 +3,8 @@
 // import '@vueup/vue-quill/dist/vue-quill.snow.css'
 // import BlotFormatter from 'quill-blot-formatter'
 import useBlogResource from "../composables/useSingleBlog"
+import { getStorage, ref as fbRef, uploadBytes, getDownloadURL } from 'firebase/storage';
+
 
 const nuxtApp:any = useNuxtApp()
 
@@ -16,6 +18,8 @@ const router:any = useRouter()
 const title = ref<string>("")
 
 const subject = ref<string>("")
+  const coverImage = ref<File | null>(null);
+
 
 const body = ref<string>("")
 
@@ -40,26 +44,47 @@ onMounted(async()=>{
 //   }
 // ]
 
-const update = async(e:Event) =>{
+const handleFileChange = (event: Event) => {
+  const input = event.target as HTMLInputElement;
+  if (input.files) {
+    coverImage.value = input.files[0];
+  }
+};
+
+const uploadToStorage = async (file: File) => {
+  const storage = getStorage(nuxtApp.$firebase);
+  const storageRef = fbRef(storage, 'coverImages/' + file.name);
+
+  await uploadBytes(storageRef, file);
+  const downloadURL = await getDownloadURL(storageRef);
+
+  return downloadURL;
+};
 
 
-const docRef = nuxtApp.$doc(nuxtApp.$db,"blogs" , route.params.id);
 
-const docSnap = await nuxtApp.$getDoc(docRef);
-if(docSnap.exists()){
- const updateBlog = nuxtApp.$doc(nuxtApp.$db, "blogs", route.params.id)
-await nuxtApp.$updateDoc(updateBlog, {
-   
-  title: title.value,
-  subject:subject.value,
-  body:body.value
-    
+const update = async() => {
+  let imageUrl = '';
+  if (coverImage.value) {
+    imageUrl = await uploadToStorage(coverImage.value);
+  }
 
-});
+  const docRef = nuxtApp.$doc(nuxtApp.$db, "blogs", route.params.id);
+  const docSnap = await nuxtApp.$getDoc(docRef);
 
-router.push('/manage-blogs')
-}
-}
+  if (docSnap.exists()) {
+    const updateBlog = nuxtApp.$doc(nuxtApp.$db, "blogs", route.params.id);
+    await nuxtApp.$updateDoc(updateBlog, {
+      title: title.value,
+      subject: subject.value,
+      coverImage: imageUrl || singleBlog[0].coverImage,  // Use the new URL if uploaded, else keep the old one.
+      body: body.value
+    });
+
+    router.push('/manage-blogs');
+  }
+};
+
 
 </script>
 <template>
@@ -76,6 +101,12 @@ router.push('/manage-blogs')
         <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Subject: </label>
         <div class="mt-2.5">
           <input type="text" name="company" id="company" autocomplete="organization" placeholder="Enter Post Subject" v-model="subject" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+        </div>
+      </div>
+      <div class="sm:col-span-2 mt-6">
+        <label for="coverImage" class="block text-sm font-semibold leading-6 text-gray-900">Upload Cover Image: </label>
+        <div class="mt-2.5">
+          <input type="file" id="coverImage" @change="handleFileChange" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" required>
         </div>
       </div>
       <div class="sm:col-span-2 mt-6 mb-2">
