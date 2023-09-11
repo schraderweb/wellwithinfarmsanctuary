@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import useBlogResource from "../../composables/useSingleBlog"
+import { useRouter } from 'vue-router';
+import useAuth from "../../composables/useAuth"
 
 const {singleBlog, fetchSingleJob} = useBlogResource()
 const route:any = useRoute()
@@ -7,6 +9,18 @@ const route:any = useRoute()
 const title = ref<string>("")
 const subject = ref<string>("")
 const body = ref<string>("")
+
+const router = useRouter()
+const { isAuthenticated, loading } = useAuth();
+
+watch(loading, (isLoading) => {
+  if (!isLoading) {
+    if (!isAuthenticated()) {
+      router.push('/login');
+    }
+  }
+});
+
 
 onMounted(async()=>{
    

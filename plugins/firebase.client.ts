@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 import { getFirestore,addDoc, collection,doc,getDoc, updateDoc,deleteDoc  } from 'firebase/firestore'
 import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
@@ -21,6 +22,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
+
+const auth = getAuth(app);
+
+nuxtApp.vueApp.provide('auth', auth)
+nuxtApp.provide('auth', auth)
 
 nuxtApp.vueApp.provide('db', db)
 nuxtApp.provide('db', db)
