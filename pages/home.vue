@@ -15,8 +15,8 @@ const {blogs} = useBlogResource("blogs")
       background-size: cover;
     "
   >
-  <div class="hidden md:block md:absolute md:py-20 md:px-20">
-    <img src="/images/logo.png" alt="" class="h-40">
+  <div class="hidden md:block md:absolute md:pb-28 md:px-20">
+    <img src="/images/logo-nobg.png" alt="" class="h-48">
   </div>
     <div class="absolute inset-0 opacity-50"></div>
     <!-- Optional: Background overlay for better text visibility -->
@@ -54,7 +54,7 @@ const {blogs} = useBlogResource("blogs")
     </div>
   </div>
   <section class="px-10 py-20 bg-light-beige">
-  <h1 class="text-5xl text-center font-bold">Blogs</h1>
+  <h1 class="text-5xl text-center font-bold">Our Latest Blogs</h1>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 items-center py-10">
     <div class="m-10 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-auto overflow-hidden items-center" v-for="blog in blogs" :key="blog.id">
       <a href="#">

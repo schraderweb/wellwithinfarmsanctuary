@@ -30,7 +30,9 @@ const logOut = async() =>{
   <header class="bg-white">
     <div class="w-full hidden lg:flex justify-center items-center mt-10 mb-10 lg:space-x-60 px-20">
       <div class="flex justify-between text-base "><img src="/images/icons8-phone-50.png" alt=""><span class="font-semibold text-xl">(616) 481-2097</span></div>
+      <NuxtLink to="/">
       <img src="/images/logo.png" alt="" class="h-28">
+      </NuxtLink>
       <div v-if="!user">
       <button class="border-2 border-red-700 py-2 px-6 text-red-700 text-lg font-semibold hover:bg-red-600 hover:text-white">Subscribe</button>
     </div>
@@ -53,7 +55,7 @@ const logOut = async() =>{
         </button>
       </div>
       <PopoverGroup class="hidden lg:flex lg:gap-x-12 lg:mr-10">  
-        <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">About</NuxtLink>
+        <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">About Us</NuxtLink>
         <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Shop</NuxtLink>
         <NuxtLink to="/blogs/" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Blog</NuxtLink>
         <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Events</NuxtLink>
@@ -61,25 +63,22 @@ const logOut = async() =>{
         <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Testimonials</NuxtLink>
         <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Gallery</NuxtLink>
         <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">FAQ</NuxtLink>
-        <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Contact</NuxtLink>
+        <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Contact Us</NuxtLink>
       </PopoverGroup>
       <div class="hidden text-lg lg:flex lg:justify-end lg:ml-4">
-        <div v-if="!user">
-        <NuxtLink to="/login" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Login<span aria-hidden="true">&rarr;</span></NuxtLink>
-        </div>
-        <div v-else>
+
+        <div v-if="user">
         <NuxtLink to="/manage-blogs" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Manage Blogs<span aria-hidden="true">&rarr;</span></NuxtLink>
- 
       </div>
       </div>
     </nav>
-    <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
+    <Dialog as="div" class="z-50 lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
       <div class="fixed inset-0 z-10" />
       <DialogPanel class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto" src="/images/logo.png" alt="" />
+            <img class="h-16 w-auto" src="/images/logo.png" alt="" />
           </a>
           <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
             <span class="sr-only">Close menu</span>
@@ -89,7 +88,7 @@ const logOut = async() =>{
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
-              <NuxtLink to="/blogs/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About Us</NuxtLink>
+              <NuxtLink to="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About Us</NuxtLink>
               <NuxtLink to="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Shop</NuxtLink>
               <NuxtLink to="/blogs/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Blog</NuxtLink>
               <NuxtLink to="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Events</NuxtLink>
@@ -98,13 +97,8 @@ const logOut = async() =>{
               <NuxtLink to="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Gallery</NuxtLink>
               <NuxtLink to="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">FAQ</NuxtLink>
               <NuxtLink to="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact Us</NuxtLink>
-
-
             </div>
-            <div class="py-6" v-if="!user">
-              <NuxtLink to="/manage-blogs" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log In</NuxtLink>
-            </div>
-            <div class="py-6">
+            <div class="py-6" v-if="user">
               <NuxtLink to="/manage-blogs" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Manage Blogs</NuxtLink>
             </div>
           </div>
