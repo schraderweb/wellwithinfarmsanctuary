@@ -32,4 +32,6 @@ onMounted(async()=>{
      <p v-html="body" class="mt-2 mb-10"></p>
 
     </article>
+
+<Footer />
 </template>

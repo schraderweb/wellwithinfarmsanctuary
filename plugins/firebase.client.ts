@@ -10,14 +10,15 @@ import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } f
 // Your web app's Firebase configuration
 export default defineNuxtPlugin(nuxtApp=>{
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDIMolEHKz8pwIegicDCEvoTyP0SagShBU",
-  authDomain: "blog-app-2a601.firebaseapp.com",
-  projectId: "blog-app-2a601",
-  storageBucket: "blog-app-2a601.appspot.com",
-  messagingSenderId: "132977405488",
-  appId: "1:132977405488:web:0a0b158201179e88ef87f5"
-};
+  const firebaseConfig = {
+    apiKey: "AIzaSyCaH2AzHkj6aKZkD22MXhQkZ6e0OS2yKxc",
+    authDomain: "well-within-farm-sanctuary.firebaseapp.com",
+    projectId: "well-within-farm-sanctuary",
+    storageBucket: "well-within-farm-sanctuary.appspot.com",
+    messagingSenderId: "13255360481",
+    appId: "1:13255360481:web:fa90746886f5ac93db5ca0",
+    measurementId: "G-WGW9YGQT5J"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

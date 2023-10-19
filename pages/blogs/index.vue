@@ -20,5 +20,6 @@ const {blogs} = useBlogResource("blogs")
 </div>
 </div>
 
+<Footer />
   </template>
   

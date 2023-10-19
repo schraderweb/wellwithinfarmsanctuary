@@ -41,4 +41,7 @@ onMounted(async()=>{
 <template>
     <Header />
     <EditBlog/>
+
+    
+ <Footer />   
 </template>

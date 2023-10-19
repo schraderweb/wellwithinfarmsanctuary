@@ -19,6 +19,7 @@ watch(loading, (isLoading) => {
 <template>
    <Header />
   <CreateBlog />
+  <Footer />
 </template>
 
 

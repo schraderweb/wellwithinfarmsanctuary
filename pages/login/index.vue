@@ -53,5 +53,9 @@ const handleLogin = async () => {
   
       </div>
     </div>
+
+    <div class="mt-20">
+     <Footer />
+    </div>
   </template>
   

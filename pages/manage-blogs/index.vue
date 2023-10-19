@@ -34,4 +34,7 @@ const addBlog = () => {
 <BlogTable :blogs="blogs"/>
 
 
+<div class="mt-28">
+<Footer />
+</div>
 </template>
