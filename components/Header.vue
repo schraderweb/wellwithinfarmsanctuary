@@ -56,7 +56,7 @@ const logOut = async() =>{
       </div>
       <PopoverGroup class="hidden lg:flex lg:gap-x-12 lg:mr-10">  
         <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">About Us</NuxtLink>
-        <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Shop</NuxtLink>
+        <NuxtLink to="https://wellwithinfarmsanctuary.myshopify.com/" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Shop</NuxtLink>
         <NuxtLink to="/blogs/" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Blog</NuxtLink>
         <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Events</NuxtLink>
         <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Donate</NuxtLink>
