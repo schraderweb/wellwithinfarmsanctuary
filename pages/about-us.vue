@@ -35,22 +35,28 @@ const {blogs} = useBlogResource("blogs")
     <h1 class="text-center text-5xl font-bold">About Us</h1>
     <div class="md:text-center text-xl mt-10 font-normal">
       <p class="pb-5 leading-8">
-        The idea of Well Within Farm Sanctuary was planted with the intention of
-        being more than a traditional farm. Its need was sprouted from the
-        necessity to become sustainable in not only traditional farm practices
-        but in many aspects of life.
+       Well Within Farm Sanctuary is more than just an amazing farm sanctuary tucked in the woods of northern Michigan, it is a lifestyle. Here we practice the ancient philosophy of Aryuveda, the science of life. This practice shows a direct correlation between how we create our products as well as the class offerings and gatherings we host here. 
+<br /><br />
+     Those behind the creative process at Well Within Farm Sanctuary have been concocting solutions to life’s ailments in real time, in extreme circumstances, under do or die conditions, using mostly foraged, gathered or given materials, (initially)as a way to soothe, understand, heal and celebrate life and all it holds. With hard fought experience, gained wisdom, advice from Sage Elders (of whom were sprinkled throughout the journey), a simple, nature driven, sustainable solution was unearthed, recognized, celebrated and utilized to promote physical and mental wellbeing. With a casual introduction to the ancient philosophy of Aryuveda and relying heavily on intuition, somewhere along the path emerged a natural guide of ancient life wisdom that not so surprising was also a natural guide of modern life wisdom. Some of those practices, remedies, rituals, food and drink, soaps, salves, butters, balms,walks, talks  and cycles were instinctively and directly related to that of ancient guides correlating with wellbeing. It is not surprising that the “Science of Life '' pertains to all life for all time. It is in this understanding that allows the knowledge to be freely accessible to every human being on Earth without exception. It is within this philosophy we can begin to simply, minimalisticly, and with enormous impact begin to change the world. 
+
       </p>
       <p class="pb-5 leading-8">
-        Well Within Farm Sanctuary Is a place where a person can learn a skill,
-        take a stroll through an LED light forest, hear beautiful music, host a
-        magical event or gathering, relax in a wood fired sauna, plant a seed,
-        eat pizza baked in an earthen oven, donate to a worthy cause, farm an
-        idea, and cultivate peace well within their hearts and minds.
+         We believe when you are able to access small bits of healthy practices in your life that these actions will compound into greater health benefits that will not only empower you but allow you the ability to be a more confident, healthy member of your community. When you start off small you have an even greater opportunity to grow in abundance naturally. 
+
       </p>
       <p class="pb-5 leading-8">
-        Please enjoy exploring our website to learn about our events, projects,
-        offerings, and more at Well Within Farm Sanctuary.
+      Currently we are diving deep into the wonderful world of thermaculture, that is thermic bathing traditions such as Finland's sauna, Japan’s sento (bathouses) and the Yucatán temazcal (hot lodges) even designing constructing and creating Finnish inspired barrel sauna kits available in  DIY or assembly on site options, health and wellness products and apparel made in traditional ways using local business services and materials whenever possible. We are  particularly proud of our barrel sauna kits using primarily Michigan sourced cedar, local millwork, and glass suppliers. Each barrel sauna kit is built piece by piece right down to the unique millwork, individually handcrafted doors, beautiful benches, sleek roofing recommendations, and the option to have either a modern electric sauna stove , or a classic MI made Nippa wood fired sauna stove. Barrel Saunas have many benefits such as better air circulation, quicker heat time, no need for insulation and low maintenance. The health benefits of sauna use are plentiful.  Some important points are increased metabolic rate, promotion of natural healing, strengthens immune system, clears the complexion, reduces the toxins in the body, relieves tension and stress, improves circulation, and aids in athletic recovery to name a few. 
       </p>
+
+
+   <p class="pb-5 leading-8">
+ We hope you will visit our sanctuary shop for a complete overview of all our products. 
+<br /><br />
+
+Have a wonderful day and as always be well within.      </p>
+
+
+      
     </div>
   </div>
   <section class="px-10 py-20 bg-light-beige">
