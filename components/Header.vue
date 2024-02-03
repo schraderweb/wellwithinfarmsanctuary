@@ -58,7 +58,7 @@ const logOut = async() =>{
         <NuxtLink to="about-us" class="text-lg font-bold leading-6 text-gray-900 hover:underline">About Us</NuxtLink>
         <NuxtLink to="https://staywonderfulworld.com/" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Shop</NuxtLink>
         <NuxtLink to="/blogs/" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Blog</NuxtLink>
-        <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Events</NuxtLink>
+        <NuxtLink to="events" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Events</NuxtLink>
         <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Donate</NuxtLink>
         <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Testimonials</NuxtLink>
         <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Gallery</NuxtLink>
