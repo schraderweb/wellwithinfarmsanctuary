@@ -2,9 +2,17 @@
 import useBlogResource from "../composables/useBlogResource"
 
 
-const {blogs} = useBlogResource("blogs")
+const {blogs} = useBlogResource("blogs");
+const title = ref('Well Within Farm Sanctuary Events')
+const description = ref('Well Within Farm description');
+const ogTitle = ref('Well Within Farm - Events');
 </script>
 <template>
+  <Head>
+      <Title>{{ title }}</Title>
+      <Meta name="description" :content="description" />
+      <Meta name="og:title" :content="ogTitle" />
+  </Head>
   <Header />
   <div
     class="relative h-[400px] md:h-[650px] w-full bg-cover bg-center"
