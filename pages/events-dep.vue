@@ -2,7 +2,7 @@
 import useBlogResource from "../composables/useBlogResource"
 
 
-const {blogs} = useBlogResource("blogs");
+const {blogs} = useBlogResource("events");
 const title = ref('Well Within Farm Sanctuary Events')
 const description = ref('Well Within Farm description');
 const ogTitle = ref('Well Within Farm - Events');

@@ -10,6 +10,7 @@ import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } f
 // Your web app's Firebase configuration
 export default defineNuxtPlugin(nuxtApp=>{
 
+
   const firebaseConfig = {
     apiKey: "AIzaSyCaH2AzHkj6aKZkD22MXhQkZ6e0OS2yKxc",
     authDomain: "well-within-farm-sanctuary.firebaseapp.com",
@@ -68,3 +69,5 @@ nuxtApp.provide('getDownloadURL ', getDownloadURL )
 
 
 });
+
+

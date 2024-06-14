@@ -78,13 +78,6 @@ Have a wonderful day and as always be well within.      </p>
   </div>
 </section>
 
-
-  <!-- Testimonials -->
-
- <Testimonials />
-
- <!-- Reviews -->
-  <Reviews />
   <!-- Footer -->
 
 

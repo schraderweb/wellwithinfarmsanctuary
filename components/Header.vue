@@ -29,7 +29,7 @@ const logOut = async() =>{
 <template>
   <header class="bg-white">
     <div class="w-full hidden lg:flex justify-center items-center mt-10 mb-10 lg:space-x-60 px-20">
-      <div class="flex justify-between text-base "><img src="/images/icons8-phone-50.png" alt=""><span class="font-semibold text-xl">(616) 481-2097</span></div>
+      <div class="flex justify-between text-base "><img src="/images/icons8-phone-50.png" alt=""><span class="font-semibold text-xl">(231) 252-6405</span></div>
       <NuxtLink to="/">
       <img src="/images/logo.png" alt="" class="h-28">
       </NuxtLink>
@@ -55,20 +55,19 @@ const logOut = async() =>{
         </button>
       </div>
       <PopoverGroup class="hidden lg:flex lg:gap-x-12 lg:mr-10">  
-        <NuxtLink to="about-us" class="text-lg font-bold leading-6 text-gray-900 hover:underline">About Us</NuxtLink>
+        <NuxtLink to="/about-us" class="text-lg font-bold leading-6 text-gray-900 hover:underline">About Us</NuxtLink>
         <NuxtLink to="https://staywonderfulworld.com/" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Shop</NuxtLink>
         <NuxtLink to="/blogs/" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Blog</NuxtLink>
-        <NuxtLink to="events" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Events</NuxtLink>
-        <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Donate</NuxtLink>
-        <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Testimonials</NuxtLink>
-        <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Gallery</NuxtLink>
-        <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">FAQ</NuxtLink>
-        <NuxtLink to="#" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Contact Us</NuxtLink>
+        <NuxtLink to="/events/" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Events</NuxtLink>
+        <NuxtLink to="/donate" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Donate</NuxtLink>
+        <NuxtLink to="/gallery" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Gallery</NuxtLink>
+        <NuxtLink to="/faq" class="text-lg font-bold leading-6 text-gray-900 hover:underline">FAQ</NuxtLink>
+        <NuxtLink to="/contact" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Contact Us</NuxtLink>
       </PopoverGroup>
       <div class="hidden text-lg lg:flex lg:justify-end lg:ml-4">
 
         <div v-if="user">
-        <NuxtLink to="/manage-blogs" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Manage Blogs<span aria-hidden="true">&rarr;</span></NuxtLink>
+        <NuxtLink to="/manage-blogs" class="text-lg font-bold leading-6 text-gray-900 hover:underline">Dashboard <span aria-hidden="true">&rarr;</span></NuxtLink>
       </div>
       </div>
     </nav>
@@ -88,15 +87,14 @@ const logOut = async() =>{
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
-              <NuxtLink to="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About Us</NuxtLink>
-              <NuxtLink to="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Shop</NuxtLink>
+              <NuxtLink to="/about-us" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About Us</NuxtLink>
+              <NuxtLink to="https://staywonderfulworld.com/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Shop</NuxtLink>
               <NuxtLink to="/blogs/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Blog</NuxtLink>
-              <NuxtLink to="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Events</NuxtLink>
-              <NuxtLink to="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Donate</NuxtLink>
-              <NuxtLink to="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Testimonials</NuxtLink>
-              <NuxtLink to="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Gallery</NuxtLink>
-              <NuxtLink to="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">FAQ</NuxtLink>
-              <NuxtLink to="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact Us</NuxtLink>
+              <NuxtLink to="/events/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Events</NuxtLink>
+              <NuxtLink to="/donate" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Donate</NuxtLink>
+              <NuxtLink to="/gallery" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Gallery</NuxtLink>
+              <NuxtLink to="/faq" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">FAQ</NuxtLink>
+              <NuxtLink to="/contact" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact Us</NuxtLink>
             </div>
             <div class="py-6" v-if="user">
               <NuxtLink to="/manage-blogs" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Manage Blogs</NuxtLink>

@@ -27,19 +27,16 @@ import useAuth from "../composables/useAuth"
                   <h2 class="mb-6 text-sm font-semibold uppercase text-white">QuickLinks</h2>
                   <ul class="font-medium text-white">
                       <li class="mb-2">
-                          <a href="#" class="hover:underline">About</a>
+                          <a href="/about-us" class="hover:underline">About</a>
                       </li>
                       <li class="mb-2">
-                          <a href="#" class="hover:underline">Shop</a>
+                          <a href="https://staywonderfulworld.com/" class="hover:underline">Shop</a>
                       </li>
                       <li class="mb-2">
-                          <a href="#" class="hover:underline">Events</a>
+                          <a href="/blogs/" class="hover:underline">Blog</a>
                       </li>
                       <li class="mb-2">
-                          <a href="#" class="hover:underline">Blog</a>
-                      </li>
-                      <li class="mb-2">
-                          <a href="#" class="hover:underline">Events</a>
+                          <a href="/events/" class="hover:underline">Events</a>
                       </li>
                   </ul>
               </div>
@@ -47,19 +44,16 @@ import useAuth from "../composables/useAuth"
                   <h2 class="mb-6 text-sm font-semibold uppercase text-white">Quick Links</h2>
                   <ul class="text-white font-medium">
                       <li class="mb-2">
-                          <a href="#" class="hover:underline ">Donate</a>
+                          <a href="/donate" class="hover:underline ">Donate</a>
                       </li>
                       <li class="mb-2">
-                          <a href="#" class="hover:underline">Testimonials</a>
+                          <a href="/gallery" class="hover:underline">Gallery</a>
                       </li>
                       <li class="mb-2">
-                          <a href="#" class="hover:underline">Gallery</a>
+                          <a href="/faq" class="hover:underline">FAQ</a>
                       </li>
                       <li class="mb-2">
-                          <a href="#" class="hover:underline">FAQ</a>
-                      </li>
-                      <li class="mb-2">
-                          <a href="#" class="hover:underline">Contact Us</a>
+                          <a href="/contact" class="hover:underline">Contact Us</a>
                       </li>
                   </ul>
               </div>

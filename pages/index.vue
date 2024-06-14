@@ -72,13 +72,6 @@ const {blogs} = useBlogResource("blogs")
   </div>
 </section>
 
-
-  <!-- Testimonials -->
-
- <Testimonials />
-
- <!-- Reviews -->
-  <Reviews />
   <!-- Footer -->
 
 
