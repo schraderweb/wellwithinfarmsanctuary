@@ -30,7 +30,7 @@ import useAuth from "../composables/useAuth"
                           <a href="/about-us" class="hover:underline">About</a>
                       </li>
                       <li class="mb-2">
-                          <a href="https://staywonderfulworld.com/" class="hover:underline">Shop</a>
+                          <a href="https://staywonderfulworld.org/" class="hover:underline">Shop</a>
                       </li>
                       <li class="mb-2">
                           <a href="/blogs/" class="hover:underline">Blog</a>
